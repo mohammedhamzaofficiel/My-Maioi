@@ -1195,7 +1195,7 @@
       
       <!-- Love Counter Card -->
       <div class="counter-card">
-        <h4 class="counter-title">عمر حبنا سوا 💕</h4>
+        <h4 class="counter-title">على قراءة فاتحتنا المباركة 💍💕</h4>
         <div class="counter-grid">
           <div class="counter-box">
             <span class="counter-number" id="count-days">00</span>
@@ -1214,7 +1214,7 @@
             <span class="counter-label">ثانية</span>
           </div>
         </div>
-        <p class="counter-subtitle">منذ لقائنا الأول في ١٩ مايو ٢٠٢٦ 🌸</p>
+        <p class="counter-subtitle">منذ قراءة فاتحتنا المباركة في ٢٨ أغسطس ٢٠٢٦ 💍🌸</p>
       </div>
 
       <div class="timeline-line" style="top: 180px;"></div>
@@ -1222,18 +1222,18 @@
       <div class="timeline-item">
         <div class="timeline-badge"></div>
         <div class="timeline-card">
-          <span class="timeline-date">١٩ مايو ٢٠٢٦ <span class="timeline-relative" id="rel-meet"></span></span>
-          <h4 class="timeline-title">يوم لقائنا الأول 🗓️🌸</h4>
-          <p class="timeline-desc">اليوم اللي اتقابلت فيه عيوننا لأول مرة.. اليوم اللي اتولد فيه عمري الحقيقي وبدأت فيه أحلى قصة في حياتي كلها.</p>
+          <span class="timeline-date">٢٨ أغسطس ٢٠٢٦ <span class="timeline-relative" id="rel-fatiha"></span></span>
+          <h4 class="timeline-title">يوم قراءة فاتحتنا المباركة 💍📜🤍</h4>
+          <p class="timeline-desc">اليوم اللي اتقرأت فيه فاتحتنا وتلاقت فيه قلوبنا وأهالينا على خير وسنة الله ورسوله.. اليوم اللي بدأت فيه خطوتنا الرسمية وبقيتي فيه نصيبي وقدري وأجمل حكاية في حياتي يا مي. 💕💍</p>
         </div>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-badge"></div>
         <div class="timeline-card">
-          <span class="timeline-date">٢٩ مايو ٢٠٢٦ <span class="timeline-relative" id="rel-love"></span></span>
-          <h4 class="timeline-title">أول كلمة حب 💬❤️</h4>
-          <p class="timeline-desc">اليوم اللي قلوبنا نطقت فيه بأعظم كلمة.. اليوم اللي اتأكدت فيه إنك الحلم اللي مش عايز أصحى منه أبداً، وبداية عهدنا الجديد سوا.</p>
+          <span class="timeline-date">لكل لحظة جاية ومستقبلنا سوا ✨🌸</span>
+          <h4 class="timeline-title">عهدنا وبيتنا الجاي 🏡❤️</h4>
+          <p class="timeline-desc">قراءة الفاتحة كانت أجمل بداية، ووعدي لكي إن كل خطوة جاية هتفضل مليانة حب وأمان وسعادة، لغاية ما يجمعنا بيتنا ونعيش كل اللي حلمنا بيه سوا.</p>
         </div>
       </div>
     </div>
@@ -1743,7 +1743,7 @@ function spawnMusicNote() {
 }
 
 // Love Counter Live Update
-const startDate = new Date('2026-05-19T00:00:00');
+const startDate = new Date('2026-08-28T00:00:00');
 function updateLoveCounter() {
   const now = new Date();
   const diff = now - startDate;
@@ -1768,25 +1768,18 @@ updateLoveCounter();
 
 // Calculate relative days for timeline items dynamically
 function updateRelativeTimelineDates() {
-  const meetDate = new Date('2026-05-19T00:00:00');
-  const loveDate = new Date('2026-05-29T00:00:00');
+  const fatihaDate = new Date('2026-08-28T00:00:00');
   const now = new Date();
   
   // Strip time elements to get pure day difference
   const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
   
-  const meetDayDiff = Math.floor((today - new Date(meetDate.getFullYear(), meetDate.getMonth(), meetDate.getDate())) / (1000 * 60 * 60 * 24));
-  const loveDayDiff = Math.floor((today - new Date(loveDate.getFullYear(), loveDate.getMonth(), loveDate.getDate())) / (1000 * 60 * 60 * 24));
+  const fatihaDayDiff = Math.floor((today - new Date(fatihaDate.getFullYear(), fatihaDate.getMonth(), fatihaDate.getDate())) / (1000 * 60 * 60 * 24));
   
-  const relMeetEl = document.getElementById('rel-meet');
-  const relLoveEl = document.getElementById('rel-love');
+  const relFatihaEl = document.getElementById('rel-fatiha');
   
-  if (relMeetEl) {
-    relMeetEl.textContent = meetDayDiff === 0 ? '(اليوم)' : meetDayDiff === 1 ? '(امبارح)' : meetDayDiff === 2 ? '(منذ يومين)' : `(منذ ${meetDayDiff} يوماً)`;
-  }
-  
-  if (relLoveEl) {
-    relLoveEl.textContent = loveDayDiff === 0 ? '(اليوم)' : loveDayDiff === 1 ? '(امبارح)' : loveDayDiff === 2 ? '(منذ يومين)' : `(منذ ${loveDayDiff} يوماً)`;
+  if (relFatihaEl) {
+    relFatihaEl.textContent = fatihaDayDiff === 0 ? '(اليوم)' : fatihaDayDiff === 1 ? '(امبارح)' : fatihaDayDiff === 2 ? '(منذ يومين)' : `(منذ ${fatihaDayDiff} يوماً)`;
   }
 }
 updateRelativeTimelineDates();
@@ -1900,7 +1893,7 @@ const tourSteps = [
   },
   {
     title: "📅 حكايتنا باليوم والثانية",
-    desc: "هنا بنحسب باليوم والساعة والدقيقة والثانية كل لحظة وكل نبضة عشناها سوا من أول يوم اتقابلنا فيه.. وكمان هتلاقي تواريخنا المميزة مسجلة تحت العداد ❤️",
+    desc: "هنا بنحسب باليوم والساعة والدقيقة والثانية كل لحظة عشناها سوا من يوم قراءة فاتحتنا المباركة.. وكمان هتلاقي مناسباتنا وعهدنا مسجل تحت العداد 💍❤️",
     emoji: "",
     tab: "timeline",
     target: ".counter-card"
